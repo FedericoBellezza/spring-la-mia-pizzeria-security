@@ -48,7 +48,6 @@ public class Pizza {
 
   @ManyToMany
   @JoinTable(name = "ingredient_pizza", joinColumns = @JoinColumn(name = "pizza_id"), inverseJoinColumns = @JoinColumn(name = "ingredient_id"))
-  // @JsonManagedReference
   private List<Ingredient> ingredients;
 
   // getters e setters

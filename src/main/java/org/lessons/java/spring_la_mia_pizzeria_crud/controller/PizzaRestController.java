@@ -50,7 +50,6 @@ public class PizzaRestController {
 
     @PostMapping("/create")
     public ResponseEntity<Pizza> store(@Valid @RequestBody Pizza pizza) {
-
         return new ResponseEntity<Pizza>(pizzaService.create(pizza), HttpStatus.OK);
     }
 

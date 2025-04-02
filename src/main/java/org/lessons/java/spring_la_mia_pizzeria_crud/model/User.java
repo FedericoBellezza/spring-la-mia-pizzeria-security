@@ -3,6 +3,7 @@ package org.lessons.java.spring_la_mia_pizzeria_crud.model;
 import java.util.Set;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -28,7 +29,7 @@ public class User {
     @NotBlank(message = "Inserisci una password valida")
     private String password;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
         name = "role_user",
         joinColumns = @JoinColumn(name = "user_id"),
