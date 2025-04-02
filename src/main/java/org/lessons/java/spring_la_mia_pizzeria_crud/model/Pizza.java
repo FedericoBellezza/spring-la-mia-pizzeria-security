@@ -51,62 +51,51 @@ public class Pizza {
   // @JsonManagedReference
   private List<Ingredient> ingredients;
 
+  // getters e setters
   public Integer getId() {
     return this.id;
   }
-
   public void setId(Integer id) {
     this.id = id;
   }
-
   public String getName() {
     return this.name;
   }
-
   public void setName(String name) {
     this.name = name;
   }
-
   public String getDescription() {
     return this.description;
   }
-
   public void setDescription(String description) {
     this.description = description;
   }
-
   public String getImage() {
     return this.image;
   }
-
   public void setImage(String image) {
     this.image = image;
   }
-
   public Integer getPrice() {
     return this.price;
   }
-
   public void setPrice(Integer price) {
     this.price = price;
   }
-
   public List<SpecialOffer> getSpecialOffers() {
     return this.specialOffers;
   }
-
   public void setSpecialOffers(List<SpecialOffer> specialOffers) {
     this.specialOffers = specialOffers;
   }
-
   public List<Ingredient> getIngredients() {
     return this.ingredients;
   }
-
   public void setIngredients(List<Ingredient> ingredients) {
     this.ingredients = ingredients;
   }
 
+  // to string
   public String toString() {
     return "Nome: " + name;
   }
