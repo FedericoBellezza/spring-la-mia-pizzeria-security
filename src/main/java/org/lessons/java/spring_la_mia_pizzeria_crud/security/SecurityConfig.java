@@ -20,7 +20,7 @@ public class SecurityConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests()
         .requestMatchers("/**").hasAnyAuthority("ADMIN")
-        .requestMatchers(HttpMethod.POST, "/**").hasAnyAuthority("ADMIN")
+        .requestMatchers( HttpMethod.POST, "/**").hasAnyAuthority("ADMIN")
         .requestMatchers("/pizzas").hasAnyAuthority("USER")
         .requestMatchers("/**").permitAll()
         .and().formLogin()

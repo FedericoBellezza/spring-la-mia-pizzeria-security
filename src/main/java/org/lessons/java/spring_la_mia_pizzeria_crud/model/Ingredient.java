@@ -50,6 +50,7 @@ public class Ingredient {
     public void setPizzas(List<Pizza> pizzas) {
         this.pizzas = pizzas;
     }
+    
 
     public String toString() {
         return name;

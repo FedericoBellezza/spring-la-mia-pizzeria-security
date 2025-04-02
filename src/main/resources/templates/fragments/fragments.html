@@ -23,6 +23,10 @@
       th:fragment="navbar"
       class="px-10 py-3 h-20 flex items-center gap-5 text-slate-700 border-b"
     >
+      <div class="bg-red-400 p-5">
+        Logged user:
+        <span sec:authentication="username"></span>
+      </div>
       <a href="/">
         <div class="absolute flex top-5 gap-5 z-2">
           <img

@@ -28,6 +28,8 @@ public class DatabaseUserDetailService implements UserDetailsService  {
         return new DatabaseUserDetails(optionalUser.get());
     }
 
+    
+
 
     
 }
