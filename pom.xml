@@ -82,6 +82,12 @@
 			<scope>test</scope>
 		</dependency>
 
+		<!-- Aggiungiamo security anche per thymeleaf attraverso una dipendenza apposita  -->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity6</artifactId>
+        </dependency>
+
 	</dependencies>
 
 	<!-- build -->

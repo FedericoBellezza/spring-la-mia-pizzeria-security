@@ -19,9 +19,9 @@ public class SecurityConfig {
     @SuppressWarnings("removal")
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests()
-        .requestMatchers("/**").hasAnyAuthority("ADMIN")
+        .requestMatchers("/pizzas/create", "pizzas/edit/**", "/ingredients", "/pizzas/*/special-offers/*").hasAnyAuthority("ADMIN")
         .requestMatchers( HttpMethod.POST, "/**").hasAnyAuthority("ADMIN")
-        .requestMatchers("/pizzas").hasAnyAuthority("USER")
+        .requestMatchers("/pizzas/*", "/**").hasAnyAuthority("USER", "ADMIN")
         .requestMatchers("/**").permitAll()
         .and().formLogin()
         .and().logout()

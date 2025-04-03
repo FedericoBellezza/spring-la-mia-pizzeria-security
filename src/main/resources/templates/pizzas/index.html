@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,7 @@
     <h1 class="text-5xl text-slate-700 font-bold italic text-center pt-10 pb-5">
       Le nostre PIZZE
     </h1>
+
     <form class="text-center my-5" method="get" action="/pizzas/search-by-name">
       <input
         class="border px-2 py-1 w-100"
@@ -27,6 +28,7 @@
         Filtra
       </button>
       <button
+        sec:authorize="hasAuthority('ADMIN')"
         onclick="window.location.href='/pizzas/create'"
         type="button"
         href="/pizzas/create"
